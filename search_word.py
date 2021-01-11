@@ -1,4 +1,4 @@
-import os, sys
+import os
 
 class Search():
     """
@@ -31,9 +31,9 @@ class Search():
 
         fpath - file path.
         """
-        self.vcount += 1
+        self.vfiles += 1
         if self.verbose:
-            print(self.vcount, '-->', fpath)
+            print(self.vfiles, '-->', fpath)
         try:
             if os.path.splitext(fpath)[1] in self.exts:
                 with open(fpath) as f:
@@ -47,7 +47,7 @@ class Search():
 
     def run(self):
         self.folder_explorer()
-        print(f'Found in {len(self.found)} file(s).\nVisited {self.vcount} file(s).\n')
+        print(f'Found in {len(self.found)} file(s).\nVisited {self.vfiles} file(s).\n')
         if self.found: print('File(s):\n', self.found)
         
 if __name__ == "__main__":
