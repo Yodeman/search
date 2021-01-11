@@ -51,7 +51,7 @@ class Search():
         if self.found: print('File(s):\n', self.found)
         
 if __name__ == "__main__":
-    start_dir = input('Enter the starting directory: ')
+    start_dir = input('Enter path to the starting directory: ')
     word = input('What word do you wish to find? ')
     extensions = input('Enter the file extensions of files you think might contain the word you wish to find: ').split()
     searcher = Search(word, extensions, start_dir, True)
